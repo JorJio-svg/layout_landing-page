@@ -1,4 +1,8 @@
 // #region page
+* {
+  box-sizing: border-box;
+}
+
 .page {
   font-family: Poppins, sans-serif;
   color: #fff;
@@ -16,7 +20,6 @@
 .page__body {
   margin: 0;
   background-color: #1d1d1d;
-  box-sizing: border-box;
 }
 
 .page__menu {
@@ -295,7 +298,6 @@
 
 .button--position {
   margin-top: 32px;
-  margin-bottom: 48px;
 }
 
 .button:hover {
@@ -310,6 +312,7 @@
 // #region contacts
 
 .label__input {
+  display: block;
   padding: 16px 0 16px 16px;
   margin-bottom: 16px;
 
@@ -319,6 +322,8 @@
 }
 
 .label__textarea {
+  display: block;
+  padding: 16px 0 16px 16px;
   width: 100%;
   height: 148px;
   border-radius: 16px;
@@ -343,8 +348,11 @@
 // #endregion
 // #region footer
 .footer {
+  z-index: -1;
+
   width: 100%;
   height: 200px;
+
   background-image: url(/src/images-for-mobile/footer-image-mobile.png);
   background-size: cover;
 }
@@ -363,7 +371,6 @@
     background-size: contain;
     background-repeat: no-repeat;
 
-    // background-position: center ;
 
     display: flex;
     flex-direction: column;
@@ -448,7 +455,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 20px;
+    padding: 36px 72px;
   }
   .top-bar__logo {
     display: flex;
@@ -510,7 +517,7 @@
 
   .title--contact-us {
     text-align: center;
-    margin: 92px 0 48px;
+    margin: 48px 0 120px;
 
     font-weight: 500;
     font-size: 32px;
@@ -534,14 +541,14 @@
   // #region move free
   .move__content {
     display: flex;
-    align-items: flex-start;
     margin-top: 120px;
-    gap: 24px;
+    gap: 32px;
   }
 
   .move__title {
     flex: 0 0 auto;
     margin: 0;
+
     font-weight: 500;
     font-size: 48px;
     line-height: 100%;
@@ -554,7 +561,6 @@
 
     font-weight: 500;
     font-size: 23px;
-    line-height: 140%;
   }
 
   // #endregion
@@ -587,10 +593,10 @@
 
   // #endregion
   // #region button
-  .button {
+  .button--send {
     cursor: pointer;
 
-    width: 40%;
+    width: 100%;
     height: 56px;
     border-radius: 40px;
 
@@ -606,7 +612,6 @@
 
   .button__position {
     margin-top: 32px;
-    margin-bottom: 48px;
   }
 
   .button__position--explore {
@@ -623,22 +628,27 @@
 
   // #endregion
   // #region contacts
-  .contact-fields {
+  .contacts {
     display: flex;
-    flex-direction: column;
+  }
+
+  .form {
+    margin-bottom: 102px;
+    margin-right: 24px;
   }
 
   .label__input {
+    display: block;
     padding: 16px 0 16px 16px;
     margin-bottom: 16px;
 
-    width: 40%;
+    width: 100%;
     border-radius: 40px;
     border: none;
   }
 
   .label__textarea {
-    width: 40%;
+    width: 100%;
     height: 148px;
     border-radius: 16px;
     border: none;
@@ -662,6 +672,7 @@
   // #endregion
   // #region footer
   .footer {
+    z-index: -1;
     width: 100%;
     height: 480px;
     background-image: url(/src/images-for-tablet/footer-bg.png);
@@ -695,7 +706,7 @@
     font-style: bold;
     font-size: 80px;
     line-height: 100%;
-    letter-spacing: -1, 5px;
+    letter-spacing: -1,5px;
 
     color: white;
   }
@@ -703,7 +714,7 @@
   // #endregion
   // #region icon
   .icon {
-    display: block;
+    // display: block;
     height: 32px;
     width: 32px;
   }
@@ -717,6 +728,7 @@
   .icon--close {
     background-image: url(/src/images-for-desktop/icons/icon-close.png);
   }
+
 
   // #endregion
   // #region menu
@@ -768,7 +780,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 20px;
+    padding: 36px 120px;
+
   }
   .top-bar__logo {
     display: flex;
@@ -837,6 +850,14 @@
     letter-spacing: -1.5px;
   }
 
+  .title--the-details {
+    text-align: center;
+
+    font-weight: 500;
+    font-size: 64px;
+    letter-spacing: -1.5px;
+  }
+
   .title--lv-3 {
     font-weight: 700;
     font-size: 24px;
@@ -877,16 +898,13 @@
 
   // #endregion
   // #region section
-  .section {
-    display: flex;
-  }
 
   .section__list {
     margin: 0;
     padding: 0;
   }
 
-  .section__list--bike {
+  .section--bike {
     display: flex;
     flex-direction: row;
   }
@@ -922,14 +940,12 @@
     color: var(--text-color);
   }
 
-  .button__position {
+  .button__position--explore {
     margin-top: 32px;
-    margin-bottom: 48px;
   }
 
   .button__position--explore {
     align-self: center;
-    margin-bottom: 180px;
   }
 
   .button:hover {
@@ -942,28 +958,31 @@
 
   // #endregion
   // #region contacts
-  .contact-fields {
+  .contacts {
     display: flex;
-    flex-direction: column;
+  }
+
+  .form {
+    width: 100%;
+
+    margin-bottom: 164px;
+    margin-right: 198px;
   }
 
   .address {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    width: 100%;
   }
 
   .label__input {
     padding: 16px 0 16px 16px;
     margin-bottom: 16px;
 
-    width: 40%;
     border-radius: 40px;
     border: none;
   }
 
   .label__textarea {
-    width: 40%;
+    width: 100%;
     height: 148px;
     border-radius: 16px;
     border: none;
