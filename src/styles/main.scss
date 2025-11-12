@@ -17,8 +17,6 @@
   overflow: hidden; /* not to scroll the page */
 }
 
-
-
 .page__body {
   margin: 0;
   background-color: #1d1d1d;
@@ -44,7 +42,7 @@
 // #region header
 .header {
   height: 100vh;
-  background-image: url(/src/images-for-mobile/header-bg-mobile.png);
+  background-image: url(/src/images/Mobile/header-bg-mobile.png);
   background-size: cover;
 
   display: flex;
@@ -77,21 +75,20 @@
 }
 
 .icon--phone {
-  background-image: url(/src/images-for-mobile/icons/icon-phone.png);
+  background-image: url(/src/images/icons/icon-phone-mobile.svg);
 }
 
-.icon--menu-default {
-  background-image: url(/src/images-for-mobile/icons/icon-burger-menu.png);
+.icon--menu {
+  background-image: url(/src/images/icons/icon-menu-mobile.svg);
 }
 
 .icon--close {
-  background-image: url(/src/images-for-mobile/icons/icon-close.png);
+  background-image: url(/src/images/icons/icon-close-mobile.svg);
 }
 
 .phone-link {
   opacity: 0;
 }
-
 
 // #endregion
 // #region menu
@@ -149,13 +146,9 @@
 
 .top-bar__logo {
   display: flex;
-  background-image: url(/src/images-for-mobile/logo-mobile.png);
+  background-image: url(/src/images/Mobile/logo-mobile.png);
   width: 130px;
   height: 38px;
-}
-
-.page:has(.page__menu:target) .top-bar__logo {
-  opacity: 0;
 }
 
 .top-bar__icons {
@@ -366,7 +359,7 @@
   width: 100%;
   height: 200px;
 
-  background-image: url(/src/images-for-mobile/footer-image-mobile.png);
+  background-image: url(/src/images/Mobile/footer-image-mobile.png);
   background-size: cover;
 }
 
@@ -380,7 +373,7 @@
   // #region header
   .header {
     height: 100vh;
-    background-image: url(/src/images-for-tablet/header-bg-tablet.png);
+    background-image: url(/src/images/Tablet/header-bg-tablet.png);
     background-size: contain;
     background-repeat: no-repeat;
 
@@ -409,13 +402,13 @@
   }
 
   .icon--phone {
-    background-image: url(/src/images-for-tablet/icons/icon-phone.png);
+    background-image: url(/src/images/icons/icon-phone-tablet.svg);
   }
   .icon--menu {
-    background-image: url(/src/images-for-tablet/icons/icon-menu.png);
+    background-image: url(/src/images/icons/icon-menu-tablet.svg);
   }
   .icon--close {
-    background-image: url(/src/images-for-tablet/icons/icon-close.png);
+    background-image: url(/src/images/icons/icon-close-tablet.svg);
   }
 
   .phone-link {
@@ -477,7 +470,7 @@
 
   .top-bar__logo {
     display: flex;
-    background-image: url(/src/images-for-tablet/logo.png);
+    background-image: url(/src/images/Tablet/logo-tablet.png);
     width: 187px;
     height: 56px;
   }
@@ -611,7 +604,7 @@
 
   // #endregion
   // #region button
-  .button--send {
+  .button {
     cursor: pointer;
 
     width: 100%;
@@ -632,8 +625,9 @@
     margin-top: 32px;
   }
 
-  .button__position--explore {
+  .button--explore {
     align-self: center;
+    width: 392px;
   }
 
   .button:hover {
@@ -695,7 +689,7 @@
     z-index: -1;
     width: 100%;
     height: 480px;
-    background-image: url(/src/images-for-tablet/footer-bg.png);
+    background-image: url(/src/images/Tablet/footer-bg-tablet.png);
     background-size: cover;
   }
 
@@ -710,7 +704,7 @@
   // #region header
   .header {
     height: 100vh;
-    background-image: url(/src/images-for-desktop/header-bg.png);
+    background-image: url(/src/images/Desktop/header-bg-desktop.png);
     background-size: cover;
 
     display: flex;
@@ -741,27 +735,13 @@
 
   .icon--phone {
     position: relative;
-    background-image: url(/src/images-for-desktop/icons/icon-phone.png);
+    background-image: url(/src/images/icons/icon-phone-desktop.svg);
   }
   .icon--menu {
-    position: relative;
-    background-image: url(/src/images-for-desktop/icons/icon-menu.png);
+    background-image: url(/src/images/icons/icon-menu-desktop.svg);
   }
   .icon--close {
-    background-image: url(/src/images-for-desktop/icons/icon-close.png);
-  }
-
-  .icon--menu-hover {
-    opacity: 0;
-    z-index: 2;
-
-    width: 32px;
-    height: 32px;
-    background-image: url(../images-for-desktop/icons/icon-menu-hover.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    position: absolute;
+    background-image: url(/src/images/icons/icon-close-desktop.svg);
   }
 
   .phone-link {
@@ -787,11 +767,10 @@
     opacity: 1;
   }
 
-  .top-bar__icons:has(.icon--menu:hover) .icon--menu {
-    opacity: 0;
-  }
-  .icon--menu:hover .icon--menu-hover {
-    opacity: 1;
+  .icon--menu:hover {
+    background-image: url(../images/icons/icon-menu-hover-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
   // #endregion
@@ -848,7 +827,7 @@
   }
   .top-bar__logo {
     display: flex;
-    background-image: url(/src/images-for-tablet/logo.png);
+    background-image: url(/src/images/Desktop/logo-desktop.png);
     width: 187px;
     height: 56px;
   }
@@ -888,7 +867,7 @@
     padding-bottom: 7px;
     border-bottom: 1px solid var(--text-color);
   }
-  
+
   // #endregion
   // #region main
   .main {
@@ -1001,6 +980,10 @@
     color: var(--button-color);
   }
 
+  .button--explore {
+    width: 324px;
+  }
+
   .button--text {
     font-weight: 700;
     font-size: 16px;
@@ -1073,7 +1056,7 @@
   // #region footer
   .footer {
     z-index: -1;
-    background-image: url(/src/images-for-desktop/footer-bg.png);
+    background-image: url(/src/images/Desktop/footer-bg-desktop.png);
     width: 100%;
     height: 555px;
   }
