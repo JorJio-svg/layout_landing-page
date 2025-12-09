@@ -32,8 +32,8 @@
   }
 
   &--contacts {
-    text-align: center;
     margin-bottom: 48px;
+    grid-column: span 2;
   }
 }
 
