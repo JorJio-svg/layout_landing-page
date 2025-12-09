@@ -1,0 +1,17 @@
+.accessories {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+
+    @include on-tablet {
+      column-gap: 24px;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
