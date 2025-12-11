@@ -10,6 +10,12 @@
   }
 }
 
+@mixin on-desktop-1260px {
+  @media (min-width: 1260px) {
+    @content;
+  }
+}
+
 @mixin padding-inline {
   padding-inline: 20px;
 
@@ -40,8 +46,23 @@
 }
 
 @mixin hover($property, $toValue) {
-  transition: #{$property} 0.3s;
+  transition: #{$property} $transition;
   &:hover {
     #{$property}: #{$toValue};
+  }
+}
+
+@mixin slide-in-right {
+  .sect {
+    opacity: 0;
+    transform: translateX(100%);
+    transition:
+    opacity $transition,
+    transform $transition;
+  }
+
+  .sect.visible {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

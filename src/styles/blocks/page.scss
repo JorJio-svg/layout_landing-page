@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 .page {
   font-family: Poppins, sans-serif;
@@ -44,7 +47,6 @@
   @include on-desktop {
     max-width: 1020px;
     margin-inline: auto;
+    padding: 0;
   }
 }
-
-

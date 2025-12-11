@@ -2,6 +2,7 @@
 .header {
   background-image: url(../images/header-bg-mobile.png);
   background-size: cover;
+  background-position: 100%;
   background-repeat: no-repeat;
 
   @include on-tablet {

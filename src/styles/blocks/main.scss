@@ -11,5 +11,7 @@
     @include on-desktop {
       padding-bottom: 164px;
     }
+
+    @include slide-in-right;
   }
 }
