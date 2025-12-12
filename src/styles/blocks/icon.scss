@@ -35,8 +35,10 @@
     position: relative;
     background-image: url(/src/images/icons/icon-phone.svg);
 
-    &:hover .phone-link {
-      opacity: 1;
+    @include on-desktop {
+      &:hover .phone-link {
+        opacity: 1;
+      }
     }
   }
 
