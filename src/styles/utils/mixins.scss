@@ -54,6 +54,7 @@
 
 @mixin slide-in-right {
   .sect {
+    // overflow-x: hidden;
     opacity: 0;
     transform: translateX(100%);
     transition:

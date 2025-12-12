@@ -13,6 +13,7 @@
   }
 
   &__body {
+    overflow-x: hidden;
     margin: 0;
     background-color: $main-text-color;
     min-width: 320px;
